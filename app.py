@@ -29,7 +29,7 @@ input_df = pd.DataFrame({
 })
 
 if st.button("Predict Risk"):
-    pred = model.pred(input_df)[0]
+    pred = model.predict(input_df)[0]
 
     if pred == 1:
         st.success("The predicted credit risk is: **GOOD**")
