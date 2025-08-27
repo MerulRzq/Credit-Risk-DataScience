@@ -14,16 +14,16 @@ job = st.number_input("Job (0-3)", min_value = 0, max_value = 3, value = 1)
 housing = st.selectbox("Housing", ["own", "rent", "free"])
 saving_accounts = st.selectbox("Saving accounts", ["little", "moderate", "rich", "quite rich"])
 checking_account = st.selectbox("Checking account", ["little", "moderate", "rich"])
-credit_amount = st.number_input("Credit account", min_value = 0, value = 100)
+credit_amount = st.number_input("Credit amount", min_value = 0, value = 100)
 duration = st.number_input("Duration (months)", min_value = 1, value = 12)
 
 input_df = pd.DataFrame({
     "Age" : [age],
-    "Sex" : [encoders["Sex"].transform([sex])],
+    "Sex" : [encoders["Sex"].transform([sex])[0]],
     "Job" : [job],
-    "Housing" : [encoders["Housing"].transform([housing])],
-    "Saving accounts" : [encoders["Saving accounts"].transform([saving_accounts])],
-    "Checking account" : [encoders["Checking account"].transform([checking_account])],
+    "Housing" : [encoders["Housing"].transform([housing])[0]],
+    "Saving accounts" : [encoders["Saving accounts"].transform([saving_accounts])[0]],
+    "Checking account" : [encoders["Checking account"].transform([checking_account])[0]],
     "Credit amount" : [credit_amount],
     "Duration" : [duration]
 })
