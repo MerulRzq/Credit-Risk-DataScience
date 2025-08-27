@@ -1,7 +1,7 @@
 # German Credit Risk Data Analysis
 
 ## 📊 Project Overview
-This project analyzes the German Credit Risk dataset to identify key factors that influence a customer's credit risk assessment. The analysis explores relationships between various customer attributes (age, job, savings, credit purpose, etc.) and their associated risk level (good vs. bad).
+This project we’ll build a Credit Risk Modeling system using Python and Machine Learning from scratch. Analyzes the German Credit Risk dataset to identify key factors that influence a customer's credit risk assessment. The analysis explores relationships between various customer attributes (age, job, savings, credit purpose) and their associated risk level (good vs. bad). Learn how to process real-world financial data, apply Scikit-learn for model training, and deploy an interactive dashboard with Streamlit
 
 ## 🎯 Objectives
 - Perform exploratory data analysis (EDA) on credit risk data.
