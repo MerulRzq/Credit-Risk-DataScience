@@ -16,6 +16,7 @@ saving_accounts = st.selectbox("Saving accounts", ["little", "moderate", "rich",
 checking_account = st.selectbox("Checking account", ["little", "moderate", "rich"])
 credit_amount = st.number_input("Credit amount", min_value = 0, value = 100)
 duration = st.number_input("Duration (months)", min_value = 1, value = 12)
+purpose = st.selectbox("Purpose", ["car", "furniture/equipment", "radio/TV", "domestic appliances", "repairs", "education", "business", "vacation/others"])
 
 input_df = pd.DataFrame({
     "Age" : [age],
@@ -25,7 +26,8 @@ input_df = pd.DataFrame({
     "Saving accounts" : [encoders["Saving accounts"].transform([saving_accounts])[0]],
     "Checking account" : [encoders["Checking account"].transform([checking_account])[0]],
     "Credit amount" : [credit_amount],
-    "Duration" : [duration]
+    "Duration" : [duration],
+    "Purpose" : [encoders["Purpose"].transform([purpose])[0]]
 })
 
 if st.button("Predict Risk"):
