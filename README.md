@@ -56,3 +56,8 @@ This project we’ll build a Credit Risk Modeling system using Python and Machin
 - Count plots for categorical feature distributions
 - Box plots and violin plots for numerical feature analysis
 - Risk comparison across all features
+
+## Final Interactive Dashboard
+![Dashboard](Streamlit.png)
+
+![Dashboard](Streamlit2.png)
