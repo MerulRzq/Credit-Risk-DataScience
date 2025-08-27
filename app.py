@@ -28,7 +28,14 @@ input_df = pd.DataFrame({
     "Duration" : [duration]
 })
 
+# Debug: Check what features the model expects
+st.write("Model expects features:", model.feature_names_in_)
+st.write("Your input features:", input_df.columns.tolist())
+
 if st.button("Predict Risk"):
+    # Ensure column order matches training data
+    input_df = input_df[model.feature_names_in_]
+    
     pred = model.predict(input_df)[0]
 
     if pred == 1:
